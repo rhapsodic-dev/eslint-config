@@ -42,7 +42,7 @@
     "prepare": "simple-git-hooks"
   },
   "peerDependencies": {
-    "eslint": "^9.35.0",
+    "eslint": "^9.39.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "vue": "^3.0.0"
   },

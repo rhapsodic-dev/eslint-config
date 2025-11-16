@@ -1,7 +1,7 @@
 {
   "name": "@rhapsodic/eslint-config",
   "type": "module",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "packageManager": "pnpm@10.20.0",
   "description": "Rhapsodic's ESLint config",
   "author": "Svyatoslav Fyodorov <intelrug@gmail.com> (https://github.com/intelrug/)",

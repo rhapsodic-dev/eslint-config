@@ -90,3 +90,9 @@ export function* generator1() {
 export function* generator2() {
   yield* generator1();
 }
+
+export function testRedeclare(param: number): string;
+export function testRedeclare(param: string): string;
+export function testRedeclare(param: string | number): string {
+  return `text ${param}`;
+}

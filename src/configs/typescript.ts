@@ -74,6 +74,10 @@ export async function typescript(options: OptionsFiles & OptionsComponentExts & 
           { '@typescript-eslint': 'ts' },
         ),
         ...renameRules(
+          pluginTs.configs['eslint-recommended'].overrides![0].rules!,
+          { '@typescript-eslint': 'ts' },
+        ),
+        ...renameRules(
           pluginTs.configs['stylistic-type-checked'].rules!,
           { '@typescript-eslint': 'ts' },
         ),

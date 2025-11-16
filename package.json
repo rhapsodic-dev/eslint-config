@@ -1,0 +1,98 @@
+{
+  "name": "@rhapsodic/eslint-config",
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.20.0",
+  "description": "Rhapsodic's ESLint config",
+  "author": "Svyatoslav Fyodorov <intelrug@gmail.com> (https://github.com/intelrug/)",
+  "license": "MIT",
+  "homepage": "https://github.com/rhapsodic-dev/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhapsodic-dev/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rhapsodic-dev/eslint-config/issues"
+  },
+  "keywords": [
+    "eslint-config"
+  ],
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "build": "nr gen && tsdown --clean --dts",
+    "stub": "tsdown",
+    "dev": "npx @eslint/config-inspector --config eslint.config.ts",
+    "build:inspector": "pnpm build && npx @eslint/config-inspector build",
+    "watch": "tsdown --watch",
+    "lint": "eslint",
+    "format": "eslint --fix",
+    "gen": "tsx scripts/typegen.ts",
+    "prepack": "nr build",
+    "release": "bumpp",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
+  },
+  "peerDependencies": {
+    "eslint": "^9.10.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-vuejs-accessibility": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@antfu/install-pkg": "catalog:prod",
+    "@clack/prompts": "catalog:prod",
+    "@stylistic/eslint-plugin": "catalog:prod",
+    "@typescript-eslint/eslint-plugin": "catalog:prod",
+    "@typescript-eslint/parser": "catalog:prod",
+    "eslint-flat-config-utils": "catalog:prod",
+    "eslint-merge-processors": "catalog:prod",
+    "eslint-plugin-import-x": "catalog:prod",
+    "eslint-plugin-unicorn": "catalog:prod",
+    "eslint-plugin-vue": "catalog:prod",
+    "eslint-processor-vue-blocks": "catalog:prod",
+    "globals": "catalog:prod",
+    "local-pkg": "catalog:prod",
+    "vue-eslint-parser": "catalog:prod"
+  },
+  "devDependencies": {
+    "@rhapsodic/eslint-config": "workspace:*",
+    "@antfu/ni": "catalog:dev",
+    "@eslint/config-inspector": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "bumpp": "catalog:dev",
+    "eslint": "catalog:peer",
+    "eslint-plugin-vuejs-accessibility": "catalog:peer",
+    "eslint-typegen": "catalog:dev",
+    "execa": "catalog:dev",
+    "lint-staged": "catalog:dev",
+    "pnpm-workspace-yaml": "catalog:dev",
+    "simple-git-hooks": "catalog:dev",
+    "tinyglobby": "catalog:dev",
+    "tsdown": "catalog:dev",
+    "tsx": "catalog:dev",
+    "typescript": "catalog:dev",
+    "vitest": "catalog:dev",
+    "vue": "catalog:peer"
+  },
+  "resolutions": {
+    "eslint": "catalog:peer"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

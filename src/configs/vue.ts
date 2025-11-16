@@ -108,12 +108,11 @@ export async function vue(options: OptionsVue & OptionsHasTypeScript & OptionsOv
             }),
           ]),
       rules: {
-        ...pluginVue.configs.base.rules as any,
         ...pluginVue.configs['flat/essential'].map((c) => c.rules).reduce((acc, c) => ({ ...acc, ...c }), {}) as any,
 
         'vue/block-lang': ['error', {
           script: {
-            lang: 'ts',
+            lang: options.typescript ? 'ts' : 'js',
             allowNoLang: false,
           },
         }],
@@ -175,7 +174,7 @@ export async function vue(options: OptionsVue & OptionsHasTypeScript & OptionsOv
 
         ...stylistic
           ? {
-              '@stylistic/max-len': 'off',
+              'style/max-len': 'off',
 
               'vue/array-bracket-newline': ['error', 'consistent'],
               'vue/array-bracket-spacing': ['error', 'never'],

@@ -89,7 +89,7 @@ function runWithConfig(name: string, configs: OptionsConfig, ...items: TypedFlat
     });
     await fs.writeFile(path.join(target, 'eslint.config.js'), `
 // @eslint-disable
-import rhapsodic from '@rhapsodic/eslint-config'
+import { rhapsodic } from '@rhapsodic/eslint-config'
 
 export default rhapsodic(
   ${JSON.stringify(configs)},

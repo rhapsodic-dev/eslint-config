@@ -33,8 +33,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Setup
+        run: npm i -g @antfu/ni
+
+      - name: Install
+        run: nci
+
       - name: Build
-        run: pnpm build
+        run: nr build
 
       - name: Publish to NPM
         run: pnpm -r publish --access public --no-git-checks

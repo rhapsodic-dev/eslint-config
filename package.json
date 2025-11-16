@@ -42,52 +42,53 @@
     "prepare": "simple-git-hooks"
   },
   "peerDependencies": {
-    "eslint": "^9.10.0",
-    "eslint-plugin-vuejs-accessibility": "^2.4.1"
+    "eslint": "^9.35.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
+    "vue": "^3.0.0"
   },
   "peerDependenciesMeta": {
     "eslint-plugin-vuejs-accessibility": {
       "optional": true
+    },
+    "vue": {
+      "optional": true
     }
   },
   "dependencies": {
-    "@antfu/install-pkg": "catalog:prod",
-    "@clack/prompts": "catalog:prod",
-    "@stylistic/eslint-plugin": "catalog:prod",
-    "@typescript-eslint/eslint-plugin": "catalog:prod",
-    "@typescript-eslint/parser": "catalog:prod",
-    "eslint-flat-config-utils": "catalog:prod",
-    "eslint-merge-processors": "catalog:prod",
-    "eslint-plugin-import-x": "catalog:prod",
-    "eslint-plugin-unicorn": "catalog:prod",
-    "eslint-plugin-vue": "catalog:prod",
-    "eslint-processor-vue-blocks": "catalog:prod",
-    "globals": "catalog:prod",
-    "local-pkg": "catalog:prod",
-    "vue-eslint-parser": "catalog:prod"
+    "@antfu/install-pkg": "^1.1.0",
+    "@clack/prompts": "^0.11.0",
+    "@stylistic/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "@typescript-eslint/parser": "^8.46.4",
+    "eslint-flat-config-utils": "^2.1.4",
+    "eslint-merge-processors": "^2.0.0",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-unicorn": "^62.0.0",
+    "eslint-plugin-vue": "^10.5.1",
+    "eslint-processor-vue-blocks": "^2.0.0",
+    "globals": "^16.5.0",
+    "local-pkg": "^1.1.2",
+    "vue-eslint-parser": "^10.2.0"
   },
   "devDependencies": {
     "@rhapsodic/eslint-config": "workspace:*",
-    "@antfu/ni": "catalog:dev",
-    "@eslint/config-inspector": "catalog:dev",
-    "@types/node": "catalog:dev",
-    "bumpp": "catalog:dev",
-    "eslint": "catalog:peer",
-    "eslint-plugin-vuejs-accessibility": "catalog:peer",
-    "eslint-typegen": "catalog:dev",
-    "execa": "catalog:dev",
-    "lint-staged": "catalog:dev",
-    "pnpm-workspace-yaml": "catalog:dev",
-    "simple-git-hooks": "catalog:dev",
-    "tinyglobby": "catalog:dev",
-    "tsdown": "catalog:dev",
-    "tsx": "catalog:dev",
-    "typescript": "catalog:dev",
-    "vitest": "catalog:dev",
-    "vue": "catalog:peer"
-  },
-  "resolutions": {
-    "eslint": "catalog:peer"
+    "@antfu/ni": "^27.0.1",
+    "@eslint/config-inspector": "^1.3.0",
+    "@types/node": "^24.10.1",
+    "bumpp": "^10.3.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
+    "eslint-typegen": "^2.3.0",
+    "execa": "^9.6.0",
+    "lint-staged": "^16.2.6",
+    "pnpm-workspace-yaml": "^1.3.0",
+    "simple-git-hooks": "^2.13.1",
+    "tinyglobby": "^0.2.15",
+    "tsdown": "^0.16.4",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.9",
+    "vue": "^3.5.24"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

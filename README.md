@@ -11,29 +11,17 @@
   - Using [ESLint Stylistic](https://github.com/eslint-stylistic/eslint-stylistic)
 - Requires ESLint v9.5.0+
 
-## Usage
-
-### Starter Wizard
-
-We provided a CLI tool to help you set up your project, or migrate from the legacy config to the new flat config with one command.
-
-```bash
-pnpm dlx @rhapsodic/eslint-config@latest
-```
-
-### Manual Install
-
-If you prefer to set up manually:
+### Install
 
 ```bash
 pnpm i -D eslint @rhapsodic/eslint-config
 ```
 
-And create `eslint.config.mjs` in your project root:
+And create `eslint.config.mjs` or `eslint.config.ts` in your project root:
 
 ```js
 // eslint.config.mjs
-import rhapsodic from '@rhapsodic/eslint-config'
+import { rhapsodic } from '@rhapsodic/eslint-config'
 
 export default rhapsodic()
 ```
@@ -47,7 +35,7 @@ If you still use some configs from the legacy eslintrc format, you can use the [
 
 ```js
 // eslint.config.mjs
-import rhapsodic from '@rhapsodic/eslint-config'
+import { rhapsodic } from '@rhapsodic/eslint-config'
 import { FlatCompat } from '@eslint/eslintrc'
 
 const compat = new FlatCompat()
@@ -125,7 +113,7 @@ Normally you only need to import the `rhapsodic` preset:
 
 ```js
 // eslint.config.js
-import rhapsodic from '@rhapsodic/eslint-config'
+import { rhapsodic } from '@rhapsodic/eslint-config'
 
 export default rhapsodic()
 ```
@@ -134,7 +122,7 @@ And that's it! Or you can configure each integration individually, for example:
 
 ```js
 // eslint.config.js
-import rhapsodic from '@rhapsodic/eslint-config'
+import { rhapsodic } from '@rhapsodic/eslint-config'
 
 export default rhapsodic({
   // `.eslintignore` is no longer supported in Flat config, use `ignores` instead
@@ -165,7 +153,7 @@ The `rhapsodic` factory function also accepts any number of arbitrary custom con
 
 ```js
 // eslint.config.js
-import rhapsodic from '@rhapsodic/eslint-config'
+import { rhapsodic } from '@rhapsodic/eslint-config'
 
 export default rhapsodic(
   {
@@ -227,7 +215,7 @@ Certain rules would only be enabled in specific files, for example, `ts/*` rules
 
 ```js
 // eslint.config.js
-import rhapsodic from '@rhapsodic/eslint-config'
+import { rhapsodic } from '@rhapsodic/eslint-config'
 
 export default rhapsodic(
   {
@@ -254,7 +242,7 @@ We also provided the `overrides` options in each integration to make it easier:
 
 ```js
 // eslint.config.js
-import rhapsodic from '@rhapsodic/eslint-config'
+import { rhapsodic } from '@rhapsodic/eslint-config'
 
 export default rhapsodic({
   vue: {
@@ -281,7 +269,7 @@ Since v2.10.0, the factory function `rhapsodic()` returns a [`FlatConfigComposer
 
 ```js
 // eslint.config.js
-import rhapsodic from '@rhapsodic/eslint-config'
+import { rhapsodic } from '@rhapsodic/eslint-config'
 
 export default rhapsodic()
   .prepend(
@@ -310,7 +298,7 @@ Vue support is detected automatically by checking if `vue` is installed in your 
 
 ```js
 // eslint.config.js
-import rhapsodic from '@rhapsodic/eslint-config'
+import { rhapsodic } from '@rhapsodic/eslint-config'
 
 export default rhapsodic({
   vue: true
@@ -323,7 +311,7 @@ To enable Vue accessibility support, you need to explicitly turn it on:
 
 ```js
 // eslint.config.js
-import rhapsodic from '@rhapsodic/eslint-config'
+import { rhapsodic } from '@rhapsodic/eslint-config'
 
 export default rhapsodic({
   vue: {
@@ -391,4 +379,5 @@ This project follows [Semantic Versioning](https://semver.org/) for releases. Ho
 
 ## License
 
+[MIT](./LICENSE) License &copy; 2019-PRESENT [Anthony Fu](https://github.com/antfu)
 [MIT](./LICENSE) License &copy; 2025-PRESENT [Svyatoslav Fyodorov](https://github.com/intelrug)

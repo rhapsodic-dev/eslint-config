@@ -171,6 +171,7 @@ export async function vue(options: OptionsVue & OptionsHasTypeScript & OptionsOv
         }],
         'vue/prefer-template': 'error',
         'vue/require-default-prop': 'off',
+        'vue/return-in-computed-property': 'off',
 
         ...stylistic
           ? {

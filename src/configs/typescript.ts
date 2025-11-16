@@ -82,6 +82,9 @@ export async function typescript(options: OptionsFiles & OptionsComponentExts & 
           { '@typescript-eslint': 'ts' },
         ),
 
+        'ts/ban-ts-comment': ['error', {
+          'ts-expect-error': 'allow-with-description',
+        }],
         'ts/no-inferrable-types': 'off',
         'ts/no-shadow': ['error'],
         'ts/no-unused-vars': ['error', {

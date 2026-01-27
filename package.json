@@ -2,7 +2,7 @@
   "name": "@rhapsodic/eslint-config",
   "type": "module",
   "version": "1.0.2",
-  "packageManager": "pnpm@10.27.0",
+  "packageManager": "pnpm@10.28.0",
   "description": "Rhapsodic's ESLint config",
   "author": "Svyatoslav Fyodorov <intelrug@gmail.com> (https://github.com/intelrug/)",
   "license": "MIT",

@@ -72,7 +72,7 @@
   },
   "devDependencies": {
     "@rhapsodic/eslint-config": "workspace:*",
-    "@antfu/ni": "^28.1.0",
+    "@antfu/ni": "^28.2.0",
     "@eslint/config-inspector": "^1.4.2",
     "@types/node": "^24.10.4",
     "bumpp": "^10.4.0",

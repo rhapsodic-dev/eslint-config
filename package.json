@@ -60,7 +60,7 @@
     "@stylistic/eslint-plugin": "^5.7.0",
     "@typescript-eslint/eslint-plugin": "^8.53.0",
     "@typescript-eslint/parser": "^8.53.0",
-    "eslint-flat-config-utils": "^2.1.4",
+    "eslint-flat-config-utils": "^3.0.0",
     "eslint-merge-processors": "^2.0.0",
     "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-unicorn": "^62.0.0",

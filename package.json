@@ -74,7 +74,7 @@
     "@rhapsodic/eslint-config": "workspace:*",
     "@antfu/ni": "^28.2.0",
     "@eslint/config-inspector": "^1.4.2",
-    "@types/node": "^24.10.4",
+    "@types/node": "^24.10.9",
     "bumpp": "^10.4.0",
     "eslint": "^9.39.2",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",

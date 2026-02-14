@@ -42,7 +42,7 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(@vue/compiler-sfc@3.5.27)(eslint@9.39.2(jiti@2.6.1))
       globals:
-        specifier: ^17.1.0
+        specifier: ^17.2.0
         version: 17.3.0
       local-pkg:
         specifier: ^1.1.2

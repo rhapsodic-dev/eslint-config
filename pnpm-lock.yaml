@@ -91,7 +91,7 @@ importers:
         specifier: ^0.2.15
         version: 0.2.15
       tsdown:
-        specifier: ^0.20.1
+        specifier: ^0.20.3
         version: 0.20.3(typescript@5.9.3)
       tsx:
         specifier: ^4.21.0
@@ -3361,7 +3361,7 @@ snapshots:
 
   eslint-import-context@0.1.9(unrs-resolver@1.11.1):
     dependencies:
-      get-tsconfig: 4.13.0
+      get-tsconfig: 4.13.3
       stable-hash-x: 0.2.0
     optionalDependencies:
       unrs-resolver: 1.11.1

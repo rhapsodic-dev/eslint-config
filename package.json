@@ -68,7 +68,7 @@
     "eslint-processor-vue-blocks": "^2.0.0",
     "globals": "^17.3.0",
     "local-pkg": "^1.1.2",
-    "vue-eslint-parser": "^10.2.0"
+    "vue-eslint-parser": "^10.4.0"
   },
   "devDependencies": {
     "@rhapsodic/eslint-config": "workspace:*",

@@ -15,7 +15,7 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1
       '@stylistic/eslint-plugin':
-        specifier: ^5.8.0
+        specifier: ^5.9.0
         version: 5.9.0(eslint@10.0.2(jiti@2.6.1))
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.56.0
@@ -857,10 +857,6 @@ packages:
 
   '@typescript-eslint/types@8.46.4':
     resolution: {integrity: sha512-USjyxm3gQEePdUwJBFjjGNG18xY9A2grDVGuk7/9AkjIF1L+ZrVnwR5VAU5JXtUnBL/Nwt3H31KlRDaksnM7/w==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@typescript-eslint/types@8.56.0':
-    resolution: {integrity: sha512-DBsLPs3GsWhX5HylbP9HNG15U0bnwut55Lx12bHB9MpXxQ+R5GC8MwQe+N1UFXxAeQDvEsEDY6ZYwX03K7Z6HQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@typescript-eslint/types@8.56.1':
@@ -2712,7 +2708,7 @@ snapshots:
   '@stylistic/eslint-plugin@5.9.0(eslint@10.0.2(jiti@2.6.1))':
     dependencies:
       '@eslint-community/eslint-utils': 4.9.1(eslint@10.0.2(jiti@2.6.1))
-      '@typescript-eslint/types': 8.56.0
+      '@typescript-eslint/types': 8.56.1
       eslint: 10.0.2(jiti@2.6.1)
       eslint-visitor-keys: 4.2.1
       espree: 10.4.0
@@ -2801,8 +2797,6 @@ snapshots:
       - supports-color
 
   '@typescript-eslint/types@8.46.4': {}
-
-  '@typescript-eslint/types@8.56.0': {}
 
   '@typescript-eslint/types@8.56.1': {}
 

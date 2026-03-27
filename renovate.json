@@ -1,23 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "github>rhapsodic-dev/renovate-config"
   ],
-  "rangeStrategy": "bump",
   "packageRules": [
-    {
-      "matchPackageNames": ["*"],
-      "minimumReleaseAge": "14 days"
-    },
     {
       "enabled": false,
       "matchDepTypes": [
         "peerDependencies"
       ]
     }
-  ],
-  "vulnerabilityAlerts": {
-    "enabled": true,
-    "minimumReleaseAge": "0 days"
-  }
+  ]
 }

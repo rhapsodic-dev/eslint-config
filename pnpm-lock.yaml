@@ -18,10 +18,10 @@ importers:
         specifier: ^5.10.0
         version: 5.10.0(eslint@10.4.0(jiti@2.6.1))
       '@typescript-eslint/eslint-plugin':
-        specifier: ^8.59.1
+        specifier: ^8.59.2
         version: 8.59.3(@typescript-eslint/parser@8.59.3(eslint@10.4.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.4.0(jiti@2.6.1))(typescript@6.0.3)
       '@typescript-eslint/parser':
-        specifier: ^8.59.1
+        specifier: ^8.59.2
         version: 8.59.3(eslint@10.4.0(jiti@2.6.1))(typescript@6.0.3)
       eslint-flat-config-utils:
         specifier: ^3.2.0

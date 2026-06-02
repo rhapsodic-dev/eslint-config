@@ -1,4 +1,4 @@
-import rhapsodic from './src'
+import rhapsodic from '../src'
 
 export default rhapsodic(
   {

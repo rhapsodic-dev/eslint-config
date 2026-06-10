@@ -58,8 +58,8 @@
     "@antfu/install-pkg": "^1.1.0",
     "@clack/prompts": "^1.4.0",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@typescript-eslint/eslint-plugin": "^8.59.4",
-    "@typescript-eslint/parser": "^8.59.4",
+    "@typescript-eslint/eslint-plugin": "^8.60.0",
+    "@typescript-eslint/parser": "^8.60.0",
     "eslint-flat-config-utils": "^3.2.0",
     "eslint-merge-processors": "^2.0.0",
     "eslint-plugin-import-x": "^4.16.2",
@@ -88,7 +88,7 @@
     "tsx": "^4.22.3",
     "typescript": "^6.0.3",
     "vitest": "^4.1.7",
-    "vue": "^3.5.34"
+    "vue": "^3.5.35"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

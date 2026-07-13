@@ -80,14 +80,17 @@ export function isPackageInScope(name: string): boolean {
 }
 
 export async function ensurePackages(packages: (string | undefined)[]): Promise<void> {
-  if (process.env.CI || process.stdout.isTTY === false || isCwdInScope === false) return;
+  if (process.env.CI || !process.stdout.isTTY || !isCwdInScope) return;
 
-  const nonExistingPackages = packages.filter((i) => i && !isPackageInScope(i)) as string[];
+  const nonExistingPackages = packages.filter((index) => index && !isPackageInScope(index)) as string[];
   if (nonExistingPackages.length === 0) return;
 
   const p = await import('@clack/prompts');
   const result = await p.confirm({
     message: `${nonExistingPackages.length === 1 ? 'Package is' : 'Packages are'} required for this config: ${nonExistingPackages.join(', ')}. Do you want to install them?`,
   });
-  if (result) await import('@antfu/install-pkg').then((i) => i.installPackage(nonExistingPackages, { dev: true }));
+  if (result) {
+    const { installPackage } = await import('@antfu/install-pkg');
+    await installPackage(nonExistingPackages, { dev: true });
+  }
 }

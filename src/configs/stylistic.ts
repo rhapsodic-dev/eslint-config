@@ -1,5 +1,5 @@
 import type { OptionsOverrides, StylisticConfig, TypedFlatConfigItem } from '../types';
-import { interopDefault } from '../utils';
+import { interopDefault } from '../utilities';
 
 export const StylisticConfigDefaults: StylisticConfig = {
   arrowParens: true,

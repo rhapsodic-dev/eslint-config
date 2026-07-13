@@ -21,11 +21,9 @@ export async function imports(options: OptionsOverrides & OptionsStylistic = {})
         'import/no-named-as-default-member': 'warn',
         'import/no-duplicates': 'warn',
 
-        ...stylistic
-          ? {
-              'import/newline-after-import': ['error', { count: 1 }],
-            }
-          : {},
+        ...stylistic && {
+          'import/newline-after-import': ['error', { count: 1 }],
+        },
 
         ...overrides,
       },

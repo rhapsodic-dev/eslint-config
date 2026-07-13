@@ -63,7 +63,7 @@
     "eslint-flat-config-utils": "^3.2.0",
     "eslint-merge-processors": "^2.0.0",
     "eslint-plugin-import-x": "^4.17.1",
-    "eslint-plugin-unicorn": "^65.0.1",
+    "eslint-plugin-unicorn": "^69.0.0",
     "eslint-plugin-vue": "^10.9.2",
     "eslint-processor-vue-blocks": "^2.0.0",
     "globals": "^17.7.0",

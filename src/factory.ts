@@ -19,7 +19,7 @@ import {
   vue,
 } from './configs';
 
-const flatConfigProps = [
+const flatConfigProperties = [
   'name',
   'languageOptions',
   'linterOptions',
@@ -50,12 +50,12 @@ export function rhapsodic(
   ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]
 ): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   const {
-    componentExts = [],
+    componentExts: componentExtensions = [],
     ignores: userIgnores = [],
     imports: enableImports = true,
     typescript: enableTypeScript = isPackageExists('typescript'),
     unicorn: enableUnicorn = true,
-    vue: enableVue = VuePackages.some((i) => isPackageExists(i)),
+    vue: enableVue = VuePackages.some((index) => isPackageExists(index)),
   } = options;
 
   const stylisticOptions = options.stylistic === false
@@ -89,13 +89,13 @@ export function rhapsodic(
   }
 
   if (enableVue) {
-    componentExts.push('vue');
+    componentExtensions.push('vue');
   }
 
   if (enableTypeScript) {
     configs.push(typescript({
       ...typescriptOptions,
-      componentExts,
+      componentExts: componentExtensions,
       overrides: getOverrides(options, 'typescript'),
     }));
   }
@@ -124,9 +124,9 @@ export function rhapsodic(
 
   // User can optionally pass a flat config item to the first argument
   // We pick the known keys as ESLint would do schema validation
-  const fusedConfig = flatConfigProps.reduce((acc, key) => {
-    if (key in options) acc[key] = options[key] as any;
-    return acc;
+  const fusedConfig = flatConfigProperties.reduce((accumulator, key) => {
+    if (Object.hasOwn(options, key)) accumulator[key] = options[key] as any;
+    return accumulator;
   }, {} as TypedFlatConfigItem);
   if (Object.keys(fusedConfig).length) configs.push([fusedConfig]);
 
@@ -161,8 +161,6 @@ export function getOverrides<K extends keyof OptionsConfig>(
   const sub = resolveSubOptions(options, key);
   return {
     ...(options.overrides as any)?.[key],
-    ...'overrides' in sub
-      ? sub.overrides
-      : {},
+    ...('overrides' in sub) && sub.overrides,
   };
 }

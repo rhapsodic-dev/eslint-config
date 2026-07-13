@@ -1,5 +1,5 @@
 import type {
-  OptionsComponentExts,
+  OptionsComponentExtensions,
 
   OptionsFiles,
   OptionsOverrides,
@@ -9,12 +9,12 @@ import type {
 } from '../types';
 import process from 'node:process';
 import { GLOB_TS, GLOB_TSX } from '../globs';
-import { interopDefault, renameRules } from '../utils';
+import { interopDefault, renameRules } from '../utilities';
 
 // eslint-disable-next-line style/max-len
-export async function typescript(options: OptionsFiles & OptionsComponentExts & OptionsOverrides & OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions = {}): Promise<TypedFlatConfigItem[]> {
+export async function typescript(options: OptionsFiles & OptionsComponentExtensions & OptionsOverrides & OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions = {}): Promise<TypedFlatConfigItem[]> {
   const {
-    componentExts = [],
+    componentExts: componentExtensions = [],
     overrides = {},
     parserOptions = {},
   } = options;
@@ -22,7 +22,7 @@ export async function typescript(options: OptionsFiles & OptionsComponentExts & 
   const files = options.files ?? [
     GLOB_TS,
     GLOB_TSX,
-    ...componentExts.map((ext) => `**/*.${ext}`),
+    ...componentExtensions.map((extension) => `**/*.${extension}`),
   ];
 
   const tsconfigPath = options?.tsconfigPath ?? undefined;
@@ -38,11 +38,11 @@ export async function typescript(options: OptionsFiles & OptionsComponentExts & 
   function makeParser(filesArray: string[], ignores?: string[]): TypedFlatConfigItem {
     return {
       files: filesArray,
-      ...ignores ? { ignores } : {},
+      ...ignores && { ignores },
       languageOptions: {
         parser: parserTs,
         parserOptions: {
-          extraFileExtensions: componentExts.map((ext) => `.${ext}`),
+          extraFileExtensions: componentExtensions.map((extension) => `.${extension}`),
           sourceType: 'module',
           projectService: {
             allowDefaultProject: ['./*.js'],

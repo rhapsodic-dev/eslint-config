@@ -18,12 +18,12 @@ const configs = await rhapsodic({
   .prepend({
     plugins: {
       '': {
-        rules: Object.fromEntries(builtinRules.entries()),
+        rules: Object.fromEntries(builtinRules),
       },
     },
   });
 
-const configNames = configs.map((i) => i.name).filter(Boolean) as string[];
+const configNames = configs.map((index) => index.name).filter(Boolean) as string[];
 
 let dts = await flatConfigsToRulesDTS(configs, {
   includeAugmentation: false,
@@ -31,7 +31,7 @@ let dts = await flatConfigsToRulesDTS(configs, {
 
 dts += `
 // Names of all the configs
-export type ConfigNames = ${configNames.map((i) => `'${i}'`).join(' | ')}
+export type ConfigNames = ${configNames.map((index) => `'${index}'`).join(' | ')}
 `;
 
 await fs.writeFile('src/typegen.d.ts', dts);

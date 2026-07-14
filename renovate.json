@@ -9,6 +9,18 @@
       "matchDepTypes": [
         "peerDependencies"
       ]
+    },
+    {
+      "enabled": false,
+      "matchDepTypes": [
+        "engines"
+      ],
+      "matchManagers": [
+        "npm"
+      ],
+      "matchPackageNames": [
+        "node"
+      ]
     }
   ]
 }

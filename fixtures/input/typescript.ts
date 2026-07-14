@@ -1,20 +1,18 @@
 // Define a TypeScript interface
-interface Person {
-  name: string;
-  age: number;
+interface Person { 
+  name: string
+  age: number
 }
 
 // Create an array of objects with the defined interface
 const people: Person[] = [
   { name: 'Alice', age: 30 },
-  { name: 'Bob', age: 25 },
-  {
-    name: 'Charlie',
-    age: 35,
-  },
+ { name: 'Bob', age: 25 },
+  { name: 'Charlie', 
+  age: 35 }
 ];
 
-const log = console.log;
+var log = console.log
 
 // Use a for...of loop to iterate over the array
 for (const person of people) {
@@ -22,12 +20,13 @@ for (const person of people) {
 }
 
 // Define a generic function
-function identity<T>(arg: T): T {
+function identity< T  >(arg: T): T {
   return arg;
 }
 
 // Use the generic function with type inference
-const result = identity('TypeScript is awesome');
+const result = identity(
+  'TypeScript is awesome');
 log(result);
 
 // Use optional properties in an interface
@@ -38,7 +37,8 @@ interface Car {
 
 // Create objects using the interface
 const car1: Car = { make: 'Toyota' };
-const car2: Car = { make: 'Ford', model: 'Focus' };
+const car2:  Car = { 
+  make: 'Ford', model: 'Focus' };
 
 // Use union types
 type Fruit = 'apple' | 'banana' | 'orange';
@@ -54,7 +54,6 @@ class Animal {
   constructor(name: string) {
     this.name = name;
   }
-
   protected makeSound(sound: string) {
     log(`${this.name} says ${sound}`);
   }
@@ -65,7 +64,6 @@ class Dog extends Animal {
   constructor(private alias: string) {
     super(alias);
   }
-
   bark() {
     this.makeSound('Woof!');
   }
@@ -74,11 +72,11 @@ class Dog extends Animal {
 const dog = new Dog('Buddy');
 dog.bark();
 
-const fn = (value: number): string => {
-  return `hello${value}`;
-};
+var fn = (): string => {
+  return 'hello' + 1
+}
 
-log(car1, car2, favoriteFruit, numericValue, fn(1));
+log(car1, car2, favoriteFruit, numericValue, fn())
 
 // Generator
 export function* generator1() {
@@ -87,12 +85,12 @@ export function* generator1() {
     yield id++;
   }
 }
-export function* generator2() {
-  yield* generator1();
+export function * generator2() {
+  yield* generator1()
 }
 
-export function testRedeclare(param: number): string;
-export function testRedeclare(param: string): string;
+export function testRedeclare(param: number): string
+export function testRedeclare(param: string): string
 export function testRedeclare(param: string | number): string {
-  return `text ${param}`;
+  return `text ${param}`
 }

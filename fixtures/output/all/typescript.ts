@@ -74,11 +74,11 @@ class Dog extends Animal {
 const dog = new Dog('Buddy');
 dog.bark();
 
-const fn = (value: number): string => {
-  return `hello${value}`;
+const fn = (): string => {
+  return `hello1`;
 };
 
-log(car1, car2, favoriteFruit, numericValue, fn(1));
+log(car1, car2, favoriteFruit, numericValue, fn());
 
 // Generator
 export function* generator1() {

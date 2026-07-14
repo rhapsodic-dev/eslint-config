@@ -12,8 +12,7 @@
 // Define reactive data and props
 import { ref } from 'vue';
 
-const version = 3;
-const greeting = ref(`Hello, Vue ${version}!`);
+const greeting = ref(`Hello, Vue 3!1`);
 const counter = ref(0);
 const doubled = computed(() => counter.value * 2);
 

@@ -59,7 +59,7 @@ export type OptionsTypescript
   = (OptionsTypeScriptWithTypes & OptionsOverrides)
     | (OptionsTypeScriptParserOptions & OptionsOverrides);
 
-export interface OptionsComponentExtensions {
+export interface OptionsComponentExts {
   /**
    * Additional extensions for components.
    *
@@ -107,7 +107,7 @@ export interface OptionsRegExp {
   level?: 'error' | 'warn';
 }
 
-export interface OptionsConfig extends OptionsComponentExtensions {
+export interface OptionsConfig extends OptionsComponentExts {
   /**
    * Extend the global ignores.
    *

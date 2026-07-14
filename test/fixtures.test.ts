@@ -128,10 +128,19 @@ export default rhapsodic(
       const content = await fs.readFile(path.join(target, file), 'utf8');
       const source = await fs.readFile(path.join(from, file), 'utf8');
       const outputPath = path.join(output, file);
-      if (content === source) {
-        await fs.rm(outputPath, { force: true });
+      let hasOutput = true;
+      try {
+        await fs.access(outputPath);
+      } catch {
+        hasOutput = false;
+      }
+
+      if (!hasOutput) {
+        expect.soft(content).toBe(source);
         return;
       }
+
+      expect.soft(content).not.toBe(source);
       await expect.soft(content).toMatchFileSnapshot(path.join(output, file));
     }));
   }, timeout);

@@ -1,5 +1,5 @@
 import type {
-  OptionsComponentExtensions,
+  OptionsComponentExts,
 
   OptionsFiles,
   OptionsOverrides,
@@ -12,7 +12,7 @@ import { GLOB_TS, GLOB_TSX } from '../globs';
 import { interopDefault, renameRules } from '../utilities';
 
 // eslint-disable-next-line style/max-len
-export async function typescript(options: OptionsFiles & OptionsComponentExtensions & OptionsOverrides & OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions = {}): Promise<TypedFlatConfigItem[]> {
+export async function typescript(options: OptionsFiles & OptionsComponentExts & OptionsOverrides & OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions = {}): Promise<TypedFlatConfigItem[]> {
   const {
     componentExts: componentExtensions = [],
     overrides = {},

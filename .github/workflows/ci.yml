@@ -62,7 +62,8 @@ jobs:
 
     strategy:
       matrix:
-        node: [lts/*]
+        eslint: ['10.4.0', '10.x']
+        node: [22, 24]
         os: [ubuntu-latest]
       fail-fast: false
 
@@ -86,6 +87,9 @@ jobs:
 
       - name: Install
         run: nci
+
+      - name: Install ESLint ${{ matrix.eslint }}
+        run: pnpm add -Dw eslint@${{ matrix.eslint }} --lockfile=false
 
       - name: Build
         run: nr build

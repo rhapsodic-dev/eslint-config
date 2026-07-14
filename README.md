@@ -7,9 +7,10 @@
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
 - **Style principle**: Minimal for reading, stable for diff, consistent
   - Sorted imports, dangling commas
-  - Single quotes, no semi
+  - Single quotes, semicolons
   - Using [ESLint Stylistic](https://github.com/eslint-stylistic/eslint-stylistic)
-- Requires ESLint v9.5.0+
+- Requires Node.js >=22
+- Requires ESLint ^10.4.0
 
 ### Install
 
@@ -51,7 +52,7 @@ export default rhapsodic(
       'eslint:recommended',
       // Other extends...
     ],
-  })
+  }),
 
   // Other flat configs...
 )
@@ -205,7 +206,7 @@ export default combine(
 
 </details>
 
-Check out the [configs](https://github.com/rhapsodic/eslint-config/blob/main/src/configs) and [factory](https://github.com/rhapsodic/eslint-config/blob/main/src/factory.ts) for more details.
+Check out the [configs](https://github.com/rhapsodic/eslint-config/blob/master/src/configs) and [factory](https://github.com/rhapsodic/eslint-config/blob/master/src/factory.ts) for more details.
 
 > Thanks to [sxzz/eslint-config](https://github.com/sxzz/eslint-config) for the inspiration and reference.
 
@@ -255,17 +256,12 @@ export default rhapsodic({
       'ts/consistent-type-definitions': ['error', 'interface'],
     },
   },
-  yaml: {
-    overrides: {
-      // ...
-    },
-  },
 })
 ```
 
 ### Config Composer
 
-Since v2.10.0, the factory function `rhapsodic()` returns a [`FlatConfigComposer` object from `eslint-flat-config-utils`](https://github.com/rhapsodic/eslint-flat-config-utils#composer) where you can chain the methods to compose the config even more flexibly.
+The factory function `rhapsodic()` returns a [`FlatConfigComposer` object from `eslint-flat-config-utils`](https://github.com/antfu/eslint-flat-config-utils#composer), allowing you to chain methods and compose the config more flexibly.
 
 ```js
 // eslint.config.js
@@ -346,7 +342,7 @@ and then
 ```bash
 pnpm i -D lint-staged simple-git-hooks
 
-// to active the hooks
+# Activate the hooks
 npx simple-git-hooks
 ```
 

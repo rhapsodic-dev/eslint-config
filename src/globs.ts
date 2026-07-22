@@ -38,6 +38,7 @@ export const GLOB_EXCLUDE = [
   '**/.tmp',
   '**/.history',
   '**/.vitepress/cache',
+  '**/histoire-static',
   '**/.nuxt',
   '**/.next',
   '**/.svelte-kit',

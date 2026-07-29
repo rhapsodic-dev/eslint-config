@@ -3,7 +3,10 @@
 import type { Linter } from 'eslint';
 import type { RuleOptions } from './typegen';
 import type {
-  Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem,
+  Awaitable,
+  ConfigNames,
+  OptionsConfig,
+  TypedFlatConfigItem,
 } from './types';
 
 import { FlatConfigComposer } from 'eslint-flat-config-utils';

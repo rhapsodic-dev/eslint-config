@@ -1,4 +1,7 @@
-import type { OptionsUnicorn, TypedFlatConfigItem } from '../types';
+import type {
+  OptionsUnicorn,
+  TypedFlatConfigItem,
+} from '../types';
 
 import { pluginUnicorn } from '../plugins';
 

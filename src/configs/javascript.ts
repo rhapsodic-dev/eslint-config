@@ -1,4 +1,7 @@
-import type { OptionsOverrides, TypedFlatConfigItem } from '../types';
+import type {
+  OptionsOverrides,
+  TypedFlatConfigItem,
+} from '../types';
 
 import globals from 'globals';
 

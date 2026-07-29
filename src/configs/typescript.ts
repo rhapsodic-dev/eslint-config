@@ -8,8 +8,14 @@ import type {
   TypedFlatConfigItem,
 } from '../types';
 import process from 'node:process';
-import { GLOB_TS, GLOB_TSX } from '../globs';
-import { interopDefault, renameRules } from '../utilities';
+import {
+  GLOB_TS,
+  GLOB_TSX,
+} from '../globs';
+import {
+  interopDefault,
+  renameRules,
+} from '../utilities';
 
 // eslint-disable-next-line style/max-len
 export async function typescript(options: OptionsFiles & OptionsComponentExts & OptionsOverrides & OptionsTypeScriptWithTypes & OptionsTypeScriptParserOptions = {}): Promise<TypedFlatConfigItem[]> {

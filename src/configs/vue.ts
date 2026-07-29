@@ -13,7 +13,10 @@ import globals from 'globals';
 
 import { mergeProcessors } from 'eslint-merge-processors';
 import { GLOB_VUE } from '../globs';
-import { ensurePackages, interopDefault } from '../utilities';
+import {
+  ensurePackages,
+  interopDefault,
+} from '../utilities';
 
 // eslint-disable-next-line style/max-len
 export async function vue(options: OptionsVue & OptionsHasTypeScript & OptionsOverrides & OptionsStylistic & OptionsFiles = {}): Promise<TypedFlatConfigItem[]> {

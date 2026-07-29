@@ -1,4 +1,8 @@
-import type { OptionsOverrides, OptionsStylistic, TypedFlatConfigItem } from '../types';
+import type {
+  OptionsOverrides,
+  OptionsStylistic,
+  TypedFlatConfigItem,
+} from '../types';
 import { pluginImportX } from '../plugins';
 
 export async function imports(options: OptionsOverrides & OptionsStylistic = {}): Promise<TypedFlatConfigItem[]> {

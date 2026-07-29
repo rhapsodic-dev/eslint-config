@@ -1,4 +1,8 @@
-import type { OptionsOverrides, StylisticConfig, TypedFlatConfigItem } from '../types';
+import type {
+  OptionsOverrides,
+  StylisticConfig,
+  TypedFlatConfigItem,
+} from '../types';
 import { interopDefault } from '../utilities';
 
 export const StylisticConfigDefaults: StylisticConfig = {
@@ -59,6 +63,23 @@ export async function stylistic(options: StylisticOptions = {}): Promise<TypedFl
         'style/function-call-argument-newline': ['error', 'consistent'],
         'style/function-call-spacing': ['error', 'never'],
         'style/function-paren-newline': ['error', 'multiline'],
+        'style/exp-list-style': ['error', {
+          overrides: {
+            '()': 'off',
+            '[]': 'off',
+            '{}': 'off',
+            '<>': 'off',
+            ImportDeclaration: {
+              singleLine: {
+                maxItems: 1,
+                spacing: 'always',
+              },
+              multiline: {
+                minItems: 2,
+              },
+            },
+          },
+        }],
         'style/lines-between-class-members': ['error', 'always', {
           exceptAfterSingleLine: true,
           exceptAfterOverload: true,

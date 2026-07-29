@@ -219,7 +219,10 @@ export async function vue(options: OptionsVue & OptionsHasTypeScript & OptionsOv
           'vue/dot-notation': ['error', {
             allowKeywords: true,
           }],
-          'vue/first-attribute-linebreak': 'off',
+          'vue/first-attribute-linebreak': ['error', {
+            singleline: 'beside',
+            multiline: 'below',
+          }],
           'vue/func-call-spacing': ['error', 'never'],
           'vue/html-closing-bracket-spacing': ['error', {
             startTag: 'never',

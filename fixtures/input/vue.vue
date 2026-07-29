@@ -2,6 +2,9 @@
   <div>
     <h1>
       {{ greeting }}</h1>
+    <input type="text"
+      aria-label="Name"
+    >
     <button type="button" @click="incrementCounter">Click me!</button>
     <p>Counter: {{ counter  }}</p>
   </div>

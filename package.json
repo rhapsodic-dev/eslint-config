@@ -82,7 +82,7 @@
     "eslint": "^10.7.0",
     "eslint-plugin-vuejs-accessibility": "^2.5.0",
     "eslint-typegen": "^2.3.1",
-    "execa": "^9.6.1",
+    "execa": "^10.0.0",
     "lint-staged": "^17.1.0",
     "pnpm-workspace-yaml": "^1.6.1",
     "simple-git-hooks": "^2.13.1",

@@ -83,7 +83,7 @@ export function isPackageInScope(name: string): boolean {
 }
 
 export async function ensurePackages(packages: (string | undefined)[]): Promise<void> {
-  if (process.env.CI || !process.stdout.isTTY || !isCwdInScope) return;
+  if (!isCwdInScope || process.env.CI || !process.stdout.isTTY) return;
 
   const nonExistingPackages = packages.filter((index) => index && !isPackageInScope(index)) as string[];
   if (nonExistingPackages.length === 0) return;

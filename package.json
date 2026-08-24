@@ -2,7 +2,7 @@
   "name": "@rhapsodic/eslint-config",
   "type": "module",
   "version": "5.0.0",
-  "packageManager": "pnpm@11.20.0+sha512.9a6f330a95b66446ea088faf1521405a8a01f07fde7124cc9958dfed52d4bb436737e65b08f85f37b46fcba375092558ac51262b816844b22f63406ed166bfee",
+  "packageManager": "pnpm@11.21.0+sha512.521705bce689924eac72f5a3587122f362689ef6571e55ba80076fd637c11132ecffada26fad4ea79c485bfddbfd3d5a2a5b05805a77e893de71ec8a6cca3bb1",
   "engines": {
     "node": ">=22"
   },
@@ -61,8 +61,8 @@
     "@antfu/install-pkg": "^2.0.1",
     "@clack/prompts": "^1.7.0",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@typescript-eslint/eslint-plugin": "^8.65.0",
-    "@typescript-eslint/parser": "^8.65.0",
+    "@typescript-eslint/eslint-plugin": "^8.66.0",
+    "@typescript-eslint/parser": "^8.66.0",
     "eslint-flat-config-utils": "^3.2.0",
     "eslint-merge-processors": "^2.0.0",
     "eslint-plugin-import-x": "^4.17.1",
@@ -75,12 +75,12 @@
   },
   "devDependencies": {
     "@rhapsodic/eslint-config": "workspace:*",
-    "@antfu/ni": "^30.3.0",
-    "@eslint/config-inspector": "^3.1.1",
+    "@antfu/ni": "^30.5.0",
+    "@eslint/config-inspector": "^3.2.0",
     "@types/node": "^24.13.3",
-    "bumpp": "^12.1.1",
-    "eslint": "^10.8.0",
-    "eslint-plugin-vuejs-accessibility": "^2.5.0",
+    "bumpp": "^12.2.0",
+    "eslint": "^10.8.1",
+    "eslint-plugin-vuejs-accessibility": "^2.6.0",
     "eslint-typegen": "^2.3.1",
     "execa": "^10.0.1",
     "lint-staged": "^17.3.0",
@@ -88,10 +88,10 @@
     "simple-git-hooks": "^2.13.1",
     "tinyglobby": "^0.2.17",
     "tsdown": "^0.22.14",
-    "tsx": "^4.23.5",
+    "tsx": "^4.23.12",
     "typescript": "^6.0.3",
     "vitest": "^4.1.10",
-    "vue": "^3.5.40"
+    "vue": "^3.5.41"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

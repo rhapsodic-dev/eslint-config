@@ -97,6 +97,6 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --fix --ignore-pattern fixtures/input --ignore-pattern fixtures/output --no-warn-ignored"
+    "*": "eslint --fix --ignore-pattern=fixtures/** --no-warn-ignored"
   }
 }

@@ -61,11 +61,10 @@ export function rhapsodic(
     vue: enableVue = VuePackages.some((index) => isPackageExists(index)),
   } = options;
 
-  const stylisticOptions = options.stylistic === false
-    ? false
-    : (typeof options.stylistic === 'object'
-        ? options.stylistic
-        : {});
+  const stylisticOptions = options.stylistic !== false
+    && (typeof options.stylistic === 'object'
+      ? options.stylistic
+      : {});
 
   const configs: Awaitable<TypedFlatConfigItem[]>[] = [];
 

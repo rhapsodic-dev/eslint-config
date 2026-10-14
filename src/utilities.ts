@@ -92,8 +92,8 @@ export async function ensurePackages(packages: (string | undefined)[]): Promise<
   const result = await p.confirm({
     message: `${nonExistingPackages.length === 1 ? 'Package is' : 'Packages are'} required for this config: ${nonExistingPackages.join(', ')}. Do you want to install them?`,
   });
-  if (result) {
-    const { installPackage } = await import('@antfu/install-pkg');
-    await installPackage(nonExistingPackages, { dev: true });
-  }
+  if (!result) return;
+
+  const { installPackage } = await import('@antfu/install-pkg');
+  await installPackage(nonExistingPackages, { dev: true });
 }

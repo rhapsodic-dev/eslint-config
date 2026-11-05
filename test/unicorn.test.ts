@@ -7,7 +7,16 @@ import { it } from 'vitest';
 import { rhapsodic } from '../src';
 
 const guards = await fs.readFile('fixtures/unicorn/guards.js', 'utf8');
+const jsdoc = await fs.readFile('fixtures/unicorn/jsdoc.js', 'utf8');
 const unusedReturn = 'const values = new Set([1]);\nvalues.has(1);\n';
+
+it.for([false, true])('preserves JSDoc when stylistic is %s', async (stylistic, { expect }) => {
+  const eslint = await createESLint({ stylistic }, true);
+  const [result] = await eslint.lintText(jsdoc);
+
+  expect(result.messages).toEqual([]);
+  expect(result.output ?? jsdoc).toBe(jsdoc);
+});
 
 it('combines guards with the recommended Unicorn rules', async ({ expect }) => {
   const eslint = await createESLint({}, true);
@@ -53,7 +62,10 @@ it('disables new rules with unicorn.overrides', async ({ expect }) => {
   expect(result.output).toBeUndefined();
 });
 
-async function createESLint(options: Pick<OptionsConfig, 'unicorn'> = {}, shouldFix = false): Promise<ESLint> {
+async function createESLint(
+  options: Pick<OptionsConfig, 'unicorn' | 'stylistic'> = {},
+  shouldFix = false,
+): Promise<ESLint> {
   return new ESLint({
     overrideConfigFile: true,
     overrideConfig: await rhapsodic({

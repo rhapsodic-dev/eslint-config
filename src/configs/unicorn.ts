@@ -22,6 +22,7 @@ export async function unicorn(options: OptionsUnicorn = {}): Promise<TypedFlatCo
         'unicorn/explicit-length-check': 'off',
         'unicorn/filename-case': 'off',
         'unicorn/no-array-reduce': 'off',
+        'unicorn/no-asterisk-prefix-in-documentation-comments': 'off',
         'unicorn/no-for-each': 'off',
         'unicorn/no-for-loop': 'off',
         'unicorn/no-null': 'off',

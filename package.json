@@ -70,7 +70,7 @@
     "eslint-plugin-vue": "^10.12.0",
     "eslint-processor-vue-blocks": "^2.0.0",
     "globals": "^17.14.0",
-    "local-pkg": "^1.2.1",
+    "local-pkg": "^2.0.0",
     "vue-eslint-parser": "^10.4.1"
   },
   "devDependencies": {

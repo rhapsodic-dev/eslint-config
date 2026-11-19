@@ -69,7 +69,7 @@
     "eslint-plugin-unicorn": "^78.0.0",
     "eslint-plugin-vue": "^10.12.0",
     "eslint-processor-vue-blocks": "^2.0.0",
-    "globals": "^17.13.0",
+    "globals": "^17.14.0",
     "local-pkg": "^1.2.1",
     "vue-eslint-parser": "^10.4.1"
   },
@@ -77,21 +77,21 @@
     "@rhapsodic/eslint-config": "workspace:*",
     "@antfu/ni": "^30.6.0",
     "@eslint/config-inspector": "^3.5.0",
-    "@types/node": "^26.6.5",
+    "@types/node": "^26.6.6",
     "bumpp": "^12.3.0",
-    "eslint": "^10.13.0",
+    "eslint": "^10.14.0",
     "eslint-plugin-vuejs-accessibility": "^2.6.3",
-    "eslint-typegen": "^2.3.1",
+    "eslint-typegen": "^2.3.2",
     "execa": "^10.2.1",
     "lint-staged": "^17.6.0",
     "pnpm-workspace-yaml": "^1.9.1",
     "simple-git-hooks": "^2.14.0",
     "tinyglobby": "^0.2.17",
-    "tsdown": "^0.23.2",
+    "tsdown": "^0.23.5",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",
-    "vitest": "^5.0.5",
-    "vue": "^3.5.44"
+    "vitest": "^5.1.0",
+    "vue": "^3.5.45"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
